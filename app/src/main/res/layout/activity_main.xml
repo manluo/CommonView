@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CommonRelativeLayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    android:orientation="vertical">
+
+    <com.xman.commonview.view.CommonRl
+        android:id="@+id/crl_my_item_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CommonRelativeLayout:leftIcon="@drawable/checked"
+        CommonRelativeLayout:leftRightDes="@string/app_name"
+        CommonRelativeLayout:leftRightDesColor="@color/colorPrimary"
+        CommonRelativeLayout:leftRightDesMarginLeft="20dp"
+        CommonRelativeLayout:leftRightDesSize="16sp"
+        CommonRelativeLayout:rightStyle="switchStyle" />
+
+    <com.xman.commonview.view.CommonRl
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CommonRelativeLayout:isShowLine="true"
+        CommonRelativeLayout:leftIcon="@drawable/checked"
+        CommonRelativeLayout:leftRightDes="@string/app_name"
+        CommonRelativeLayout:leftRightDesColor="@color/colorPrimary"
+        CommonRelativeLayout:leftRightDesMarginLeft="20dp"
+        CommonRelativeLayout:leftRightDesSize="16sp"
+        CommonRelativeLayout:rightStyle="switchStyle"
+        CommonRelativeLayout:showLineMarginLeft="0dp" />
+
+    <com.xman.commonview.view.CommonRl
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CommonRelativeLayout:checkboxCustomStyle="@drawable/checkbox_style"
+        CommonRelativeLayout:leftIcon="@drawable/checked"
+        CommonRelativeLayout:leftRightDes="@string/app_name"
+        CommonRelativeLayout:leftRightDesColor="@color/colorPrimary"
+        CommonRelativeLayout:leftRightDesMarginLeft="20dp"
+        CommonRelativeLayout:leftRightDesSize="16sp"
+        CommonRelativeLayout:rightStyle="checkBoxStyle" />
+
+    <com.xman.commonview.view.CommonRl
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CommonRelativeLayout:leftIcon="@drawable/checked"
+        CommonRelativeLayout:leftRightDes="@string/app_name"
+        CommonRelativeLayout:leftRightDesColor="@color/colorPrimary"
+        CommonRelativeLayout:leftRightDesMarginLeft="20dp"
+        CommonRelativeLayout:leftRightDesSize="16sp"
+        CommonRelativeLayout:rightIcon="@drawable/checked"
+        CommonRelativeLayout:rightLeftDes="99+"
+        CommonRelativeLayout:rightLeftDesMarginRight="10dp"
+        CommonRelativeLayout:rightLeftDesSize="12sp" />
+
+</LinearLayout>

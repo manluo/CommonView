@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonRelativeLayout">
+        <attr name="leftIcon" format="integer" />
+        <attr name="leftRightDes" format="string" />
+        <attr name="rightIcon" format="integer" />
+        <attr name="rightLeftDes" format="string" />
+        <attr name="leftRightDesColor" format="color" />
+        <attr name="leftRightDesSize" format="dimension" />
+        <attr name="leftRightDesMarginLeft" format="dimension" />
+        <attr name="rightLeftDesColor" format="color" />
+        <attr name="rightLeftDesSize" format="dimension" />
+        <attr name="rightLeftDesMarginRight" format="dimension" />
+        <attr name="middleDes" format="string" />
+        <attr name="middleDesColor" format="color" />
+        <attr name="middleDesSize" format="dimension" />
+        <attr name="isShowLine" format="boolean" />
+        <attr name="showLineMarginLeft" format="dimension" />
+        <attr name="showLineMarginRight" format="dimension" />
+        <attr name="showLineSize" format="dimension" />
+        <attr name="checkboxCustomStyle" format="integer" />
+        <attr name="rightStyle" format="enum">
+            <enum name="defaultStyle" value="0" />
+            <enum name="switchStyle" value="1" />
+            <enum name="checkBoxStyle" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
