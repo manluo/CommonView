@@ -2,11 +2,13 @@ package com.xman.commonview.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.AppCompatCheckBox;
 import android.support.v7.widget.SwitchCompat;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
@@ -352,6 +354,47 @@ public class CommonRl extends RelativeLayout implements CompoundButton.OnChecked
         mRootRl.setLayoutParams(layoutParams);
     }
 
+    /**
+     * 本地图片资源
+     *
+     * @param resId
+     */
+    public void setLeftIcon(int resId) {
+        mIvLeftIcon.setImageResource(resId);
+    }
+
+    /**
+     * @param bitmap
+     */
+    public void setLeftIcon(Bitmap bitmap) {
+        if (bitmap == null) return;
+        mIvLeftIcon.setImageBitmap(bitmap);
+    }
+
+    /**
+     * @param drawable
+     */
+    public void setLeftIcon(Drawable drawable) {
+        if (drawable == null) return;
+        mIvLeftIcon.setImageDrawable(drawable);
+    }
+
+    public void setLeftRightDes(String des) {
+        if (TextUtils.isEmpty(des)) return;
+        mTvLeftRightDes.setText(des);
+    }
+
+    public void setLeftRightDes(float tvSize) {
+        mTvLeftRightDes.setTextSize(tvSize);
+    }
+
+    public void setLeftRightDes(int tvSize) {
+        mTvLeftRightDes.setTextSize(tvSize);
+    }
+
+    public void setLeftRightColor(int leftRightColor) {
+        mTvLeftRightDes.setTextColor(leftRightColor);
+    }
 
     public interface OnRightCheckListener {
         void onCheck(boolean isCheck);
