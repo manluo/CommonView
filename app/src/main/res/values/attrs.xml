@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CommonRelativeLayout">
+    <declare-styleable name="CommonRl">
         <attr name="leftIcon" format="integer" />
         <attr name="leftRightDes" format="string" />
         <attr name="rightIcon" format="integer" />

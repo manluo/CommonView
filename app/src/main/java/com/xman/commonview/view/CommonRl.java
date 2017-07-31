@@ -128,7 +128,7 @@ public class CommonRl extends RelativeLayout implements CompoundButton.OnChecked
      * @param attrs
      */
     private void getAttributeSetAttrs(Context context, AttributeSet attrs) {
-        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CommonRelativeLayout);
+        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.CommonRl);
         int n = attributes.getIndexCount();
         for (int i = 0; i < n; i++) {
             int attr = attributes.getIndex(i);
@@ -147,70 +147,70 @@ public class CommonRl extends RelativeLayout implements CompoundButton.OnChecked
      */
     private void setViewStyle(int attr, TypedArray attributes) {
         switch (attr) {
-            case R.styleable.CommonRelativeLayout_leftIcon:
+            case R.styleable.CommonRl_leftIcon:
                 mIvLeftIcon.setVisibility(View.VISIBLE);
                 mLeftIcon = attributes.getDrawable(attr);
                 mIvLeftIcon.setImageDrawable(mLeftIcon);
                 break;
-            case R.styleable.CommonRelativeLayout_leftRightDes:
+            case R.styleable.CommonRl_leftRightDes:
                 mLeftRightDes = attributes.getString(attr);
                 mTvLeftRightDes.setText(mLeftRightDes);
                 break;
-            case R.styleable.CommonRelativeLayout_leftRightDesSize:
+            case R.styleable.CommonRl_leftRightDesSize:
                 mLeftRightDesSize = attributes.getDimension(attr, mleftRightDesSizeDefault);
                 mTvLeftRightDes.setTextSize(TypedValue.COMPLEX_UNIT_PX, mLeftRightDesSize);
                 break;
-            case R.styleable.CommonRelativeLayout_leftRightDesColor:
+            case R.styleable.CommonRl_leftRightDesColor:
                 mLeftRightDesColor = attributes.getColor(attr, leftRightDesColorDefault);
                 mTvLeftRightDes.setTextColor(mLeftRightDesColor);
                 break;
-            case R.styleable.CommonRelativeLayout_rightIcon:
+            case R.styleable.CommonRl_rightIcon:
                 mRightIcon = attributes.getDrawable(attr);
                 mIvRightIcon.setImageDrawable(mRightIcon);
                 break;
-            case R.styleable.CommonRelativeLayout_rightLeftDes:
+            case R.styleable.CommonRl_rightLeftDes:
                 mRightLeftDes = attributes.getString(attr);
                 mTvRightLeftDes.setText(mRightLeftDes);
                 break;
-            case R.styleable.CommonRelativeLayout_rightLeftDesSize:
+            case R.styleable.CommonRl_rightLeftDesSize:
                 mRightLeftDesSize = attributes.getDimension(attr, mleftRightDesSizeDefault);
                 mTvRightLeftDes.setTextSize(TypedValue.COMPLEX_UNIT_PX, mRightLeftDesSize);
                 break;
-            case R.styleable.CommonRelativeLayout_rightLeftDesColor:
+            case R.styleable.CommonRl_rightLeftDesColor:
                 mRightLeftDesColor = attributes.getColor(attr, leftRightDesColorDefault);
                 mTvRightLeftDes.setTextColor(mRightLeftDesColor);
                 break;
-            case R.styleable.CommonRelativeLayout_rightStyle:
+            case R.styleable.CommonRl_rightStyle:
                 mRightModel = attributes.getInt(attr, 0);
                 setRightModel(mRightModel);
                 break;
-            case R.styleable.CommonRelativeLayout_leftRightDesMarginLeft: //左侧描述 距离左边的距离
+            case R.styleable.CommonRl_leftRightDesMarginLeft: //左侧描述 距离左边的距离
                 int leftMargin = (int) attributes.getDimension(attr, 0);
                 LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) mTvLeftRightDes.getLayoutParams();
                 layoutParams.leftMargin = leftMargin;
                 mTvLeftRightDes.setLayoutParams(layoutParams);
                 break;
-            case R.styleable.CommonRelativeLayout_rightLeftDesMarginRight: //右侧描述 距离右边的距离
+            case R.styleable.CommonRl_rightLeftDesMarginRight: //右侧描述 距离右边的距离
                 int rightMargin = (int) attributes.getDimension(attr, 0);
                 LayoutParams rightLeftMarginRightLayoutParams = (LayoutParams) mTvRightLeftDes.getLayoutParams();
                 rightLeftMarginRightLayoutParams.rightMargin = rightMargin;
                 mTvRightLeftDes.setLayoutParams(rightLeftMarginRightLayoutParams);
                 break;
-            case R.styleable.CommonRelativeLayout_middleDes: //标题
+            case R.styleable.CommonRl_middleDes: //标题
                 if (mRlMiddle.getVisibility() != View.VISIBLE) {
                     mRlMiddle.setVisibility(View.VISIBLE);
                 }
                 mTvMiddleDes.setText(attributes.getString(attr));
                 break;
-            case R.styleable.CommonRelativeLayout_middleDesColor:
+            case R.styleable.CommonRl_middleDesColor:
                 int mMiddleDesColor = attributes.getColor(attr, leftRightDesColorDefault);
                 mTvMiddleDes.setTextColor(mMiddleDesColor);
                 break;
-            case R.styleable.CommonRelativeLayout_middleDesSize:
+            case R.styleable.CommonRl_middleDesSize:
                 float mMiddleDesSize = attributes.getDimension(attr, mleftRightDesSizeDefault);
                 mTvMiddleDes.setTextSize(TypedValue.COMPLEX_UNIT_PX, mMiddleDesSize);
                 break;
-            case R.styleable.CommonRelativeLayout_isShowLine: //是否展示布局下边的线
+            case R.styleable.CommonRl_isShowLine: //是否展示布局下边的线
                 boolean isShowLine = attributes.getBoolean(attr, true); //默认是展示
                 if (isShowLine) {
                     mViewLine.setVisibility(View.VISIBLE);
@@ -218,25 +218,25 @@ public class CommonRl extends RelativeLayout implements CompoundButton.OnChecked
                     mViewLine.setVisibility(View.GONE);
                 }
                 break;
-            case R.styleable.CommonRelativeLayout_showLineMarginLeft: //线的左边距
+            case R.styleable.CommonRl_showLineMarginLeft: //线的左边距
                 int showLineMarginLeft = (int) attributes.getDimension(attr, 0);
                 LayoutParams lineParams = (LayoutParams) mViewLine.getLayoutParams();
                 lineParams.leftMargin = showLineMarginLeft;
                 mViewLine.setLayoutParams(lineParams);
                 break;
-            case R.styleable.CommonRelativeLayout_showLineMarginRight: //线的右边距
+            case R.styleable.CommonRl_showLineMarginRight: //线的右边距
                 int showLineMarginRight = (int) attributes.getDimension(attr, 0);
                 LayoutParams lineMarginParams = (LayoutParams) mViewLine.getLayoutParams();
                 lineMarginParams.rightMargin = showLineMarginRight;
                 mViewLine.setLayoutParams(lineMarginParams);
                 break;
-            case R.styleable.CommonRelativeLayout_showLineSize: //线的大小
+            case R.styleable.CommonRl_showLineSize: //线的大小
                 int showLineSize = (int) attributes.getDimension(attr, 1);
                 LayoutParams heightLineParams = (LayoutParams) mViewLine.getLayoutParams();
                 heightLineParams.height = showLineSize;
                 mViewLine.setLayoutParams(heightLineParams);
                 break;
-            case R.styleable.CommonRelativeLayout_checkboxCustomStyle: //Checkbox 样式
+            case R.styleable.CommonRl_checkboxCustomStyle: //Checkbox 样式
                 Drawable checkBoxDrawable = attributes.getDrawable(attr);
                 mCheckBox.setButtonDrawable(null);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
