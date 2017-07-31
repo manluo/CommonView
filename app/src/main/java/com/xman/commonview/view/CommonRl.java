@@ -197,6 +197,9 @@ public class CommonRl extends RelativeLayout implements CompoundButton.OnChecked
                 mTvRightLeftDes.setLayoutParams(rightLeftMarginRightLayoutParams);
                 break;
             case R.styleable.CommonRelativeLayout_middleDes: //标题
+                if (mRlMiddle.getVisibility() != View.VISIBLE) {
+                    mRlMiddle.setVisibility(View.VISIBLE);
+                }
                 mTvMiddleDes.setText(attributes.getString(attr));
                 break;
             case R.styleable.CommonRelativeLayout_middleDesColor:
