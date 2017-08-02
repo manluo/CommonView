@@ -87,3 +87,6 @@ name="checkboxCustomStyle" format="integer" 自定义drawable
 
 #### 3.效果图
 ![](screenshot.png)
+
+#### 4.参考链接 
+https://github.com/leonHua/LSettingView
