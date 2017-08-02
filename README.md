@@ -54,10 +54,36 @@ name="checkboxCustomStyle" format="integer" 自定义drawable
             <enum name="switchStyle" value="1" />
             <enum name="checkBoxStyle" value="2" />
         </attr>
-    </declare-styleable>
- 
+    </declare-styleable> 
  ```
 
+#### 2.使用demo
 
+ ```
+ <com.xman.commonview.view.CommonRl
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CommonRl:checkboxCustomStyle="@drawable/checkbox_style"
+        CommonRl:leftIcon="@drawable/checked"
+        CommonRl:leftRightDes="@string/app_name"
+        CommonRl:leftRightDesColor="@color/colorPrimary"
+        CommonRl:leftRightDesMarginLeft="20dp"
+        CommonRl:leftRightDesSize="16sp"
+        CommonRl:rightStyle="checkBoxStyle" />
+         
+  <com.xman.commonview.view.CommonRl
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        CommonRl:leftIcon="@drawable/checked"
+        CommonRl:leftRightDes="@string/app_name"
+        CommonRl:leftRightDesColor="@color/colorPrimary"
+        CommonRl:leftRightDesMarginLeft="20dp"
+        CommonRl:leftRightDesSize="16sp"
+        CommonRl:rightIcon="@drawable/checked"
+        CommonRl:rightLeftDes="99+"
+        CommonRl:rightLeftDesMarginRight="10dp"
+        CommonRl:rightLeftDesSize="12sp" />
+```
 
-
+#### 3.效果图
+![](screenshot.png)
